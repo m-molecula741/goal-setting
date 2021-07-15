@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+   {{book.title}}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="mt-5">
+    <p> цель -  {{book.title}}</p>
+    <p> Автор - {{ book.autor }} </p> <br>
+    <p> {{book.text}} </p>
+</h1>
+
+<h4> Под редакцией МАИСа 2021</h4>
+{% endblock %}
+

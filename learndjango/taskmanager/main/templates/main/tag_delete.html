@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Delete
+{% endblock %}
+
+
+{% block content %}
+<h4>Вы уверены , что хотите удалить <b>{{ tag.title }}</b> ?</h4>
+    <a href="{% url 'tag_detail_url' slug=tag.slug  %}"><button class="btn btn-primary">Cansel</button></a>
+<form action="{% url 'tag_delete_url' slug=tag.slug %}" method="post">
+    {% csrf_token %}
+    <button type="submit" name="button" class="btn btn-danger">Delete</button>
+</form>
+{% endblock %}

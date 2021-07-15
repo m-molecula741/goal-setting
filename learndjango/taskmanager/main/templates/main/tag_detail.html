@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    {{ tag.title }} - {{block.super }}
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-5">Book with "{{ tag.title|title }}" tag:</h1>
+    {% for book in tag.books.all %}
+        {% include 'main/includes/book_card_template.html' %}
+    {% endfor %}
+{% endblock %}
+
+

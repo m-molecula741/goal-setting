@@ -1,0 +1,22 @@
+               <div class="container mt-5" style="width : 400px" >
+                        <div class="row">
+                            <p style="width : 400px">
+                        <div class="card mb=4">
+                          <div class="card-header">
+                            {{ book.date_pub }}
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">{{book.title}}</h5>
+                            <p class="card-text">{{ book.autor|truncatewords:15 }}</p>
+                            <a href="{{ book.get_absolute_url }}" class="btn btn-primary">read</a>
+                            <a href="{{ book.get_delete_url }}" class="btn btn-danger">delete</a>
+                          </div>
+                              <div class="card-footer text-muted">
+                                Tags:
+                                  {% for tag in book.tags.all %}
+                                  <a href="{{ tag.get_absolute_url }}">{{ tag.title }}</a>
+                                  {% endfor %}
+                                      </p>
+                              </div>
+                        </div>
+                        </div>
