@@ -10,7 +10,7 @@ from django.urls import reverse
 from django.db.models  import Q
 from django.http import HttpResponse
 from django.core.paginator import Paginator
-# Create your views here.
+
 
 
 def index(request):
